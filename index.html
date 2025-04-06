@@ -1,193 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- jQuery for smooth scrolling and button functionality -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
-</section>
 
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
-</section>
+  <header>
+    <nav id="menu">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#photos">My Photos</a></li>
+        <li><a href="#playlist">My Playlist</a></li>
+        <li><a href="#like">Like</a></li>
+        <li><a href="#qrcoder">QR Code</a></li>
+        <li><a href="#spa">Q&A</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
-</section>
+  <main>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>Hey, I'm <strong>Trevor Philips</strong> from GTA V—a force of nature known for my unpredictable, wild lifestyle.</p>
+      <p>I thrive on chaos and live life on the edge, whether I'm running my unconventional business or diving into adrenaline-fueled adventures.</p>
+      <p>My story is one of raw passion and relentless ambition, always pushing the limits of what's possible.</p>
+      <p>Explore my world and discover what makes me one of the most unforgettable characters in Los Santos!</p>
+    </section>
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
-</section>
+    <section id="photos" class="section">
+      <h2>My Photos</h2>
+      <p>Below are some of my favorite photos over the years:</p>
+      <div class="photo-gallery">
+        <img src="TrevorYoung.jpg" alt="Trevor Philips 2004 With Beard" class="photo">
+        <img src="TrevorPhilips2004.jpg" alt="Trevor Philips 2004" class="photo">
+        <img src="TrevorPhilips2024.jpg" alt="Trevor Philips 2024" class="photo">
+        <img src="TrevorPhilips2024WithFriends.jpg" alt="Trevor Philips 2024 With Friends" class="photo">
+        <img src="TrevorAndMike.jpg" alt="Trevor Philips 2024 With Beard" class="photo">
+      </div>
+    </section>
 
-<section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
-</section>
+    <section id="playlist" class="section">
+      <h2>My Playlist</h2>
+      <p>I really connected with the song "Don't Push Me Around" and this is my favorite song.</p>
+      <p>This is the song that plays when I first appear in the game GTA V.</p>
+      <p>Check out the video below:</p>
+      <div class="video-container">
+        <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/VWe8D9ui9rI?si=QcdlafZHO4gcZw0u" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </section>
 
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
+    <section id="like" class="section">
+      <h2>Give Me a Like</h2>
+      <p>If you enjoy my page, please show your support:</p>
+      <button id="likeButton">Like</button>
+      <span id="likeCount">0</span> Likes
+    </section>
 
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
-</section>
+    <section id="qrcoder" class="section">
+      <h2>QR Code</h2>
+      <p>Scan this QR code to visit my favorite website:</p>
+      <img src="https://via.placeholder.com/150" alt="QR Code">
+    </section>
 
+    <section id="spa" class="section">
+      <h2>Q&A</h2>
+      <article>
+        <h3>How do I create a Gmail account?</h3>
+        <p>Visit <a href="https://accounts.google.com/signup" target="_blank">Google Signup</a> and follow the steps.</p>
+      </article>
+      <article>
+        <h3>How can I watch videos on YouTube?</h3>
+        <p>Go to <a href="https://www.youtube.com" target="_blank">YouTube</a>, search for a topic, and click on a video.</p>
+      </article>
+    </section>
 
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p>If you want to reach out, please fill in the form:</p>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Send">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+
+  <!-- JavaScript for smooth scrolling and like button counter -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      // Smooth scrolling for menu links with a header offset
+      $("#menu a").click(function(e){
+        e.preventDefault();
+        const target = this.hash;
+        $('html, body').animate({
+          scrollTop: $(target).offset().top - 60
+        }, 800);
+      });
+      
+      // Like button counter functionality
+      let likeCount = 0;
+      $("#likeButton").click(function(){
+        likeCount++;
+        $("#likeCount").text(likeCount);
+      });
+    });
+  </script>
+
 </body>
 </html>
