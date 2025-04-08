@@ -104,6 +104,13 @@
         <input type="text" id="name" name="name"><br><br>
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email"><br><br>
+        <label for="smiley">Choose a smiley:</label><br>
+        <select id="smiley" name="smiley">
+          <option value="😊">😊</option>
+          <option value="😃">😃</option>
+          <option value="🙂">🙂</option>
+          <option value="😎">😎</option>
+        </select><br><br>
         <label for="message">Message:</label><br>
         <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
         <input type="submit" value="Send">
@@ -117,15 +124,16 @@
           // Retrieve field values
           var name = $("#name").val();
           var email = $("#email").val();
+          var smiley = $("#smiley").val();
           var message = $("#message").val();
-          // Create subject and email body
           var subject = "Contact from " + name;
-          var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
+          var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message + "\nSmiley: " + smiley;
           // Open the user's default mail application
           window.location.href = "mailto:navians@post.bgu.ac.il?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
         });
       });
     </script>
+    
     
 
   <!-- JavaScript for smooth scrolling and like button counter -->
