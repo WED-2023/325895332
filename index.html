@@ -28,10 +28,9 @@
   <main>
     <section id="about" class="section">
       <h2>About Me</h2>
-      <p>Hey, I'm <strong>Trevor Philips</strong> from GTA V—a force of nature known for my unpredictable, wild lifestyle.</p>
+      <p>Hey, I'm <strong>Trevor Philips</strong> from GTA V.</p>
       <p>I thrive on chaos and live life on the edge, whether I'm running my unconventional business or diving into adrenaline-fueled adventures.</p>
-      <p>My story is one of raw passion and relentless ambition, always pushing the limits of what's possible.</p>
-      <p>Explore my world and discover what makes me one of the most unforgettable characters in Los Santos!</p>
+      <p>Explore my website to learn more about me.
     </section>
 
     <section id="photos" class="section">
@@ -73,26 +72,34 @@
 
     <section id="qrcoder" class="section">
       <h2>QR Code</h2>
-      <p>Scan this QR code to visit my favorite website:</p>
-      <img src="https://via.placeholder.com/150" alt="QR Code">
+      <p>Scan this QR code to visit my website:</p>
+      <img src="QRCode.png" alt="QR Code">
     </section>
 
-    <section id="spa" class="section">
-      <h2>Q&A</h2>
+    <section id="spa" class="section" dir="rtl">
+      <h2 style="direction: ltr;">Q&A</h2>
       <article>
-        <h3>How do I create a Gmail account?</h3>
-        <p>Visit <a href="https://accounts.google.com/signup" target="_blank">Google Signup</a> and follow the steps.</p>
+        <h3>1. פרטו שלושה הבדלים מרכזיים בין Web1, Web2 ו-Web3</h3>
+        <p>
+          <strong>Web1:</strong> אתרים סטטיים עם תוכן קבוע, שמיועדים בעיקר רק להצגת מידע וקריאה .<br>
+          <strong>Web2:</strong> אתרים איטראקטיביים  שהמשתמשים יכולים לשתף, להגיב ולהתערב בתוכן.<br>
+          <strong>Web3:</strong> רשת מבוזרת שבה המשתמשים שומרים ומנהלים את המידע שלהם באופן עצמאי, יש שימוש בטכנולוגיות כמו בלוקצ'יין לאבטחת המידע.
+        </p>
       </article>
       <article>
-        <h3>How can I watch videos on YouTube?</h3>
-        <p>Go to <a href="https://www.youtube.com" target="_blank">YouTube</a>, search for a topic, and click on a video.</p>
+        <h3>2. דוגמא: חיפוש "תופעות לוואי של תרופות"</h3>
+        <p>
+          <strong>Web1:</strong> נקבל תוצאה פשוטה – מאמר סטטי עם מידע בסיסי.<br>
+          <strong>Web2:</strong> נקבל תוצאת חיפוש שיהיה בה גם מאמרים עם תגובות, ביקורות ותכנים חזותיים כמו סרטונים.<br>
+          <strong>Web3:</strong> נקבל תוצאת חיפוש שתגיע ממקורות מבוזרים, עם נתונים מאומתים ויהיה שמירה על פרטיות המשתמש.
+        </p>
       </article>
     </section>
 
     <section id="contact" class="section">
       <h2>Contact Me</h2>
       <p>If you want to reach out, please fill in the form:</p>
-      <form>
+      <form id="contactForm">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br><br>
         <label for="email">Email:</label><br>
@@ -102,11 +109,24 @@
         <input type="submit" value="Send">
       </form>
     </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 My Website</p>
-  </footer>
+    
+    <script>
+      $(document).ready(function(){
+        $("#contactForm").submit(function(e){
+          e.preventDefault();
+          // Retrieve field values
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var message = $("#message").val();
+          // Create subject and email body
+          var subject = "Contact from " + name;
+          var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
+          // Open the user's default mail application
+          window.location.href = "mailto:navians@post.bgu.ac.il?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        });
+      });
+    </script>
+    
 
   <!-- JavaScript for smooth scrolling and like button counter -->
   <script type="text/javascript">
@@ -120,7 +140,7 @@
         }, 800);
       });
       
-      // Like button counter functionality
+      // Like button counter
       let likeCount = 0;
       $("#likeButton").click(function(){
         likeCount++;
